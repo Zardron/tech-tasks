@@ -1,29 +1,16 @@
 import React from "react";
 import {
-  Navbar,
-  MobileNav,
   Typography,
-  Button,
   Menu,
   MenuHandler,
   MenuList,
   MenuItem,
-  Avatar,
   Card,
-  IconButton,
 } from "@material-tailwind/react";
 import {
-  CubeTransparentIcon,
-  UserCircleIcon,
-  CodeBracketSquareIcon,
   Square3Stack3DIcon,
   ChevronDownIcon,
-  Cog6ToothIcon,
-  InboxArrowDownIcon,
-  LifebuoyIcon,
-  PowerIcon,
   RocketLaunchIcon,
-  Bars2Icon,
 } from "@heroicons/react/24/outline";
 
 // nav list menu
@@ -73,7 +60,7 @@ function NavListMenu() {
           <Typography as="a" href="#" variant="small" className="font-normal">
             <MenuItem
               {...triggers}
-              className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
+              className="hidden items-center gap-2 text-blue-gray-900 2xl:flex 2xl:rounded-full"
             >
               <Square3Stack3DIcon className="h-[18px] w-[18px]" /> Pages{" "}
               <ChevronDownIcon
@@ -87,7 +74,7 @@ function NavListMenu() {
         </MenuHandler>
         <MenuList
           {...triggers}
-          className="hidden w-[36rem] grid-cols-7 gap-3 overflow-visible lg:grid"
+          className="hidden ml-60 2 w-[36rem] grid-cols-7 gap-3 overflow-visible 2xl:grid"
         >
           <Card
             color="blue"
@@ -102,10 +89,10 @@ function NavListMenu() {
           </ul>
         </MenuList>
       </Menu>
-      <MenuItem className="flex items-center gap-2 text-blue-gray-900 lg:hidden">
+      <MenuItem className="flex items-center gap-2 text-blue-gray-900 2xl:hidden">
         <Square3Stack3DIcon className="h-[18px] w-[18px]" /> Pages{" "}
       </MenuItem>
-      <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
+      <ul className="ml-6 flex w-full flex-col gap-1 2xl:hidden">
         {renderItems}
       </ul>
     </React.Fragment>

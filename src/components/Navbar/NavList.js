@@ -24,7 +24,7 @@ const navListItems = [
 
 function NavList() {
   return (
-    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
+    <ul className="mb-4 mt-2 flex flex-col gap-2 xl:mb-0 lg:mt-0 2xl:flex-row 2xl:items-center">
       <NavListMenu />
       {navListItems.map(({ label, icon }, key) => (
         <Typography
