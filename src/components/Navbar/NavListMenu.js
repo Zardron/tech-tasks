@@ -146,7 +146,7 @@ function NavListMenu() {
               <ChevronDownIcon
                 strokeWidth={2}
                 className={`h-3 w-3 transition-transform ${
-                  isEmployee ? "rotate-180" : ""
+                  isTask ? "rotate-180" : ""
                 }`}
               />
             </MenuItem>

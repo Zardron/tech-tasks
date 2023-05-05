@@ -38,8 +38,12 @@ const NavbarMenu = () => {
           <Link to="/">
             <img src={Logo} className="h-14" alt="logo" />
           </Link>
-          <div className="hidden absolute top-2/4 left-[5%] translate-x-2/4 -translate-y-2/4 2xl:block">
-            <NavList />
+          <div
+            className={`hidden absolute top-2/4 ${
+              loggedIn ? "left-[5%]" : "left-[11%]"
+            } translate-x-2/4 -translate-y-2/4 2xl:block`}
+          >
+            <NavList loggedIn={loggedIn} />
           </div>
           <div className="flex items-center gap-4 xs:m-2">
             <Typography

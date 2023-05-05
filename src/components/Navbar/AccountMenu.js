@@ -1,12 +1,15 @@
 import React from "react";
 import { Typography, MenuItem } from "@material-tailwind/react";
-import { UserPlusIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowLeftOnRectangleIcon,
+  UserPlusIcon,
+} from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 
 const navListItems = [
   {
     label: "Sign in",
-    icon: UserPlusIcon,
+    icon: ArrowLeftOnRectangleIcon,
     link: "/sign-in",
   },
   {

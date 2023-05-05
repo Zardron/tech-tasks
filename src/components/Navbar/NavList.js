@@ -24,7 +24,7 @@ import { getCurrentDate } from "../GetCurrentDate";
 //   },
 // ];
 
-function NavList() {
+const NavList = ({ loggedIn }) => {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -50,7 +50,7 @@ function NavList() {
         {time.toLocaleTimeString()}
       </Typography>
 
-      <NavListMenu />
+      {loggedIn && <NavListMenu />}
       {/* {navListItems.map(({ label, icon }, key) => (
         <Typography
           key={label}
@@ -68,6 +68,6 @@ function NavList() {
       ))} */}
     </ul>
   );
-}
+};
 
 export default NavList;

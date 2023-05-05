@@ -3,6 +3,7 @@ import NavbarMenu from "./components/Navbar/NavbarMenu";
 import HomePage from "./pages/HomePage";
 import SignIn from "./components/Account/SignIn";
 import SignUp from "./components/Account/SignUp";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <Route path="/sign-up" element={<SignUp />} />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     </>
   );
