@@ -1,22 +1,34 @@
 import React, { useEffect, useState } from "react";
-import { Navbar, MobileNav, IconButton } from "@material-tailwind/react";
+import {
+  Navbar,
+  MobileNav,
+  IconButton,
+  Typography,
+} from "@material-tailwind/react";
 import NavList from "../Navbar/NavList";
 import ProfileMenu from "../Navbar/ProfileMenu";
 import AccountMenu from "../Navbar/AccountMenu";
 import MobileAccountMenu from "../Navbar/MobileAccountMenu";
 import Logo from "../../img/logo.png";
 import { Link } from "react-router-dom";
+import { getCurrentDate } from "../GetCurrentDate";
+import { CalendarDaysIcon, ClockIcon } from "@heroicons/react/24/solid";
 
 const NavbarMenu = () => {
   const [openNav, setOpenNav] = useState(false);
+  const [time, setTime] = useState(new Date());
 
-  const loggedIn = true;
+  const loggedIn = false;
 
   useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 760 && setOpenNav(false)
     );
+  }, []);
+
+  useEffect(() => {
+    setInterval(() => setTime(new Date(), 1000));
   }, []);
 
   return (
@@ -29,7 +41,24 @@ const NavbarMenu = () => {
           <div className="hidden absolute top-2/4 left-[5%] translate-x-2/4 -translate-y-2/4 2xl:block">
             <NavList />
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 xs:m-2">
+            <Typography
+              variant="medium"
+              color="blue-gray"
+              className="font-bold 2xl:hidden xs:text-xs flex items-center"
+            >
+              <CalendarDaysIcon className="h-[20px] w-[20px] mr-2 xs:hidden" />{" "}
+              {getCurrentDate()}
+            </Typography>
+            <Typography
+              variant="medium"
+              color="blue-gray"
+              className="font-bold 2xl:hidden xs:text-xs flex items-center"
+            >
+              <ClockIcon className="h-[20px] w-[20px] mr-2 xs:hidden" />{" "}
+              {time.toLocaleTimeString()}
+            </Typography>
+
             <IconButton
               variant="text"
               className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent 2xl:hidden"

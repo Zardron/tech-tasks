@@ -1,5 +1,4 @@
 import React from "react";
-import NavbarMenu from "../components/Navbar/NavbarMenu";
 import { Card, Typography } from "@material-tailwind/react";
 
 const HomePage = () => {
@@ -17,7 +16,10 @@ const HomePage = () => {
           >
             Welcome to <span>TECH TASK</span>
           </Typography>
-          <Typography className="text-[34.8px] mt-4" color="blue-gray">
+          <Typography
+            className="flex items-center justify-center font-light text-[34.8px] mt-4"
+            color="blue-gray"
+          >
             A web platform where you can monitor all the task of all your
             employees
           </Typography>
